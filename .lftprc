@@ -5,14 +5,14 @@ alias bzless bzmore
 alias reconnect "close; cd ."
 
 ## make prompt look better
-#set prompt "lftp \S\? \u\@\h:\w> "
+set prompt "lftp \S\? \u\@\h:\w> "
 ## some may prefer colors (contributed by DA <mwormald@optushome.com.au>)
-set prompt "\[\e[1;30m\][\[\e[0;34m\]f\[\e[1m\]t\[\e[37m\]p\[\e[30m\]] \[\e[34m\]\u\[\e[0;34m\]\@\[\e[1m\]\h\[\e[1;30m\]:\[\e[1;34m\]\w\[\e[1;30m\]>\[\e[0m\] "
+#set prompt "\[\e[1;30m\][\[\e[0;34m\]f\[\e[1m\]t\[\e[37m\]p\[\e[30m\]] \[\e[34m\]\u\[\e[0;34m\]\@\[\e[1m\]\h\[\e[1;30m\]:\[\e[1;34m\]\w\[\e[1;30m\]>\[\e[0m\] "
 ## Uncomment the following two lines to make switch cls and ls, making
 ## cls the default.
 alias ls command cls
 #debug 3
-#alias hostls command ls
+alias hostls command ls
 
 ## default protocol selection
 #set default-protocol/ftp.*	ftp
@@ -52,8 +52,8 @@ set xfer:max-redirections 10
 # set ftp:proxy http://your.http.proxy:port
 
 ## This can be used for automatic saving of configuration
-# set at-exit "set > ~/.lftp/settings"
-# source ~/.lftp/settings
+set at-exit "set > ~/.lftp/settings"
+source ~/.lftp/settings
 
 ## and this is for remembring last site
 ## (combine with previous rule if you want)
